@@ -13,6 +13,13 @@ body {
     grid-template-columns: 1fr 6fr;
 }
 
+img {
+    width: 40px;
+    height: auto;
+    margin: 15px;
+    justify-self: end;
+}
+
 .right {
     display: grid;
     grid-template-rows: 1fr 5fr;
@@ -39,11 +46,19 @@ body {
     filter: invert(100%);
 }
 
-.left > div {
+.left > div,
+.greeting,
+button,
+.username,
+input {
     font-family: 'Radley', Courier, sans-serif;
     font-size: 20px;
     font-weight: 600;
     margin-right: 10px;
+}
+
+.left > div {
+    margin-right: 20px;
 }
 
 .left > :nth-child(1) {
@@ -52,4 +67,81 @@ body {
 
 .left > :nth-child(2) {
     font-size: 35px;
+}
+
+.header {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.thirdquarter > :nth-child(1) {
+    width: 100px;
+}
+
+.profpic {
+    display: block;
+    border-radius: 50%;
+    border: solid 2px black;
+}
+
+.firstquarter {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+.thirdquarter {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    max-width: 1000px;
+}
+
+.fourthquarter,
+.secondquarter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    max-width: 500px;
+    justify-self: end;
+    margin-right: 40px;
+}
+
+.greeting {
+    align-self: center;
+}
+
+.larger-text {
+    font-size: 30px;
+}
+
+button {
+    background-color: rgb(105, 95, 255);
+    color: white;
+    border-radius: 35px;
+    margin: 15px;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+}
+
+.search-bar {
+    align-self: center;
+    display: grid;
+    margin-right: 40px;
+}
+
+input {
+    background-color: rgb(190, 190, 190);
+    min-height: 30px;
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+
+.username {
+    align-self: center;
+}
+
+.secondquarter {
+    grid-template-columns: 1fr 70px 1fr;
 }
