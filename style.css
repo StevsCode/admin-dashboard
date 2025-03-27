@@ -1,5 +1,5 @@
 * {
-    border: solid 4px black;
+    border: solid 1px black;
 }
 
 @import "modern-normalize";
@@ -171,8 +171,8 @@ input {
 .trending {
     display: grid;
     grid-template-columns: 1fr;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    max-width: 350px;
 }
 
 .announcements > .title,
@@ -187,7 +187,7 @@ input {
 .trend1, .trend2, .trend3, .trend4 {
     background: #f8f9fa;
     padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .ann1, .trend1 {
@@ -234,6 +234,12 @@ input {
 .trending > div > img {
     grid-row: span 2;
     align-self: center;
-    justify-self: end;
+    justify-self: center;
     width: 75px;
+}
+
+.trending > :not(:last-child),
+.announcements > :not(:last-child) {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 8px;
 }
