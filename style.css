@@ -125,7 +125,13 @@ button {
     font-size: 15px;
     width: 100px;
     height: 40px;
+    transition: background-color 0.3s; 
 }
+
+button:hover {
+    background-color: rgb(85, 75, 215);
+}
+
 
 .smaller {
     width: 35px;
