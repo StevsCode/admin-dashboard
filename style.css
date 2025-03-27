@@ -321,4 +321,5 @@ input {
     border-radius: 8px;
     cursor: pointer;
     padding: 10px 10px;
-}
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
