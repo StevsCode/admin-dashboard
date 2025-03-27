@@ -51,7 +51,8 @@ img {
 button,
 .username,
 input,
-.announcements {
+.announcements,
+.trending {
     font-family: 'Radley', Courier, sans-serif;
     font-size: 20px;
     font-weight: 600;
@@ -83,7 +84,8 @@ input,
     width: 100px;
 }
 
-.profpic {
+.profpic,
+.trending > div > img {
     display: block;
     border-radius: 50%;
     border: solid 2px black;
@@ -165,49 +167,73 @@ input {
     grid-row: span 2;
 }
 
-.announcements {
+.announcements,
+.trending {
     display: grid;
     grid-template-columns: 1fr;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
 }
 
-.announcements .title {
+.announcements > .title,
+.trending > .title {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
+    align-self: end;
 }
 
-.ann1, .ann2, .ann3 {
+.ann1, .ann2, .ann3,
+.trend1, .trend2, .trend3, .trend4 {
     background: #f8f9fa;
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.ann1 {
+.ann1, .trend1 {
     border-radius: 10px 10px 0 0;
 }
 
-.ann3 {
+.ann3, .trend4 {
     border-radius: 0 0 10px 10px;
 }
 
-.ann1:hover, .ann2:hover, .ann3:hover {
+.ann1:hover, .ann2:hover, .ann3:hover,
+.trend1:hover, .trend2:hover, .trend3:hover, .trend4:hover {
     background: #e9ecef;
     transition: 0.3s;
 }
 
-.ann1 div, .ann2 div, .ann3 div {
+.ann1 div, .ann2 div, .ann3 div,
+.trend1 div, .trend2 div, .trend3 div, .trend4 div {
     margin-bottom: 5px;
 }
 
-.anntitle1, .anntitle2, .anntitle3 {
+.anntitle1, .anntitle2, .anntitle3,
+.trendtitle1, .trendtitle2, .trendtitle3, .trendtitle4 {
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
+    align-self: last baseline;
 }
 
-.anntext1, .anntext2, .anntext3 {
+.anntext1, .anntext2, .anntext3,
+.trendtext1, .trendtext2, .trendtext3, .trendtext4 {
     font-size: 0.9rem;
     color: #666;
+    align-self: baseline;
+}
+
+.trending > :nth-child(n+2) {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+.trending > div > img {
+    grid-row: span 2;
+    align-self: center;
+    justify-self: end;
+    width: 75px;
 }
