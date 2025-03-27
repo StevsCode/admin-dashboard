@@ -50,7 +50,8 @@ img {
 .greeting,
 button,
 .username,
-input {
+input,
+.announcements {
     font-family: 'Radley', Courier, sans-serif;
     font-size: 20px;
     font-weight: 600;
@@ -143,6 +144,7 @@ input {
     min-height: 30px;
     border-radius: 20px;
     padding: 4px 10px;
+    font-weight: 200;
 }
 
 .username {
@@ -161,4 +163,51 @@ input {
 
 .projects {
     grid-row: span 2;
+}
+
+.announcements {
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.announcements .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ann1, .ann2, .ann3 {
+    background: #f8f9fa;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ann1 {
+    border-radius: 10px 10px 0 0;
+}
+
+.ann3 {
+    border-radius: 0 0 10px 10px;
+}
+
+.ann1:hover, .ann2:hover, .ann3:hover {
+    background: #e9ecef;
+    transition: 0.3s;
+}
+
+.ann1 div, .ann2 div, .ann3 div {
+    margin-bottom: 5px;
+}
+
+.anntitle1, .anntitle2, .anntitle3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.anntext1, .anntext2, .anntext3 {
+    font-size: 0.9rem;
+    color: #666;
 }
